@@ -1,20 +1,44 @@
+// import { useState } from "react";
 
-import React from 'react'
-import ProductCard, { Greet } from "./call.jsx";
+// function App() {
+//   const [showMessage, setShowMessage] = useState(true);
+//   const [count, setCount] = useState(0);
+//   const [message, setMessage] = useState("");
 
-function App() {
-  return (
-    <div>
-      <h1>Hi, Harsshwadhan</h1>
+//   function handleToggle() {
+//     setShowMessage((prev) => !prev);
+//   }
 
-      <ProductCard title="Wireless Headphones" price={99} />
-      <ProductCard title="Mechanical Keyboard" price={149} />
-      <ProductCard title="Ergonomic Mouse" price={45} />
+//   function handleIncrement() {
+//     if ((count+1)%5!=0){
+//       setCount((prev) => prev + 1);
+//       setMessage("");
+//     } else {
+//       setCount((prev) => prev + 2);
+//       setMessage("Skipped multiple of 5");
+//     }
+//   }
 
-      <Greet name="Harsshwardhan Chowdhary" squad={168} />
-      <Greet name="Naman" squad={169} />
-    </div>
-  )
-}
+//   function handleDecrement() {
+//     if ((count-1)%5!=0){
+//       setCount((prev) => prev - 1);
+//       setMessage("");
+//     } else {
+//       setCount((prev) => prev - 2);
+//       setMessage("Skipped multiple of 5");
+//     }
+//   }
+//   return (
+//     <div>
+//       <h1>{count}</h1>
+//       {message && <p role="status">{message}</p>}
+//       {showMessage && <h1>Sorry</h1>}
+//       <button onClick={handleToggle}>{showMessage ? "Remove" : "Show"}</button>
+//       <button onClick={handleIncrement}>Increment</button>
+//       <button onClick={handleDecrement}>Decrement</button>
+//     </div>
+//   );
+// }
 
-export default App
+// export default App;
+// In React, state is a built-in object or memory container that stores dynamic data specific to a component, allowing it to remember information between renders and update the user interface automatically when that data changes.
