@@ -1,44 +1,47 @@
-// import { useState } from "react";
+import { useState } from 'react';
 
-// function App() {
-//   const [showMessage, setShowMessage] = useState(true);
-//   const [count, setCount] = useState(0);
-//   const [message, setMessage] = useState("");
 
-//   function handleToggle() {
-//     setShowMessage((prev) => !prev);
-//   }
+function LearnEvent() {
+  /*
+   * Normal - js - click
+   * React - js - onClick, onInput, onChange, onSubmit, onKeypress, onMouseover
+   */
 
-//   function handleIncrement() {
-//     if ((count+1)%5!=0){
-//       setCount((prev) => prev + 1);
-//       setMessage("");
-//     } else {
-//       setCount((prev) => prev + 2);
-//       setMessage("Skipped multiple of 5");
-//     }
-//   }
 
-//   function handleDecrement() {
-//     if ((count-1)%5!=0){
-//       setCount((prev) => prev - 1);
-//       setMessage("");
-//     } else {
-//       setCount((prev) => prev - 2);
-//       setMessage("Skipped multiple of 5");
-//     }
-//   }
-//   return (
-//     <div>
-//       <h1>{count}</h1>
-//       {message && <p role="status">{message}</p>}
-//       {showMessage && <h1>Sorry</h1>}
-//       <button onClick={handleToggle}>{showMessage ? "Remove" : "Show"}</button>
-//       <button onClick={handleIncrement}>Increment</button>
-//       <button onClick={handleDecrement}>Decrement</button>
-//     </div>
-//   );
-// }
+  const [text, setText] = useState("");
 
-// export default App;
-// In React, state is a built-in object or memory container that stores dynamic data specific to a component, allowing it to remember information between renders and update the user interface automatically when that data changes.
+
+  function handleClick() {
+    alert("Hello Everyone ");
+  }
+
+
+  function handleChange(e) {
+    setText(e.target.value);
+  }
+
+
+  function handleClear() {
+    setText("");
+  }
+
+
+  return (
+    <div>
+      {/* Click */}
+      <button onClick={handleClick}>ShowAlert</button>
+
+
+      {/* onChange */}
+      <input type="text" value={text} onChange={handleChange} />
+      <h1>{text}</h1>
+
+
+      <button onClick={handleClear}>ClearAll</button>
+    </div>
+  );
+}
+
+
+export default LearnEvent;
+// In React, an event is an action or occurrence—such as a click, mouse hover, key press, or form submission—that happens in the browser and can be handled by your code to create an interactive user interface.
